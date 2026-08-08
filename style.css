@@ -193,4 +193,78 @@ footer span {
     section {
         padding: 60px 20px;
     }
+}/* ===== TiVon Studio Portfolio Gallery ===== */
+
+.gallery {
+    padding: 70px 8%;
+    background: #050505;
+    text-align: center;
+}
+
+.gallery h2 {
+    color: #d4af37;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.gallery > p {
+    color: #bdbdbd;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-item {
+    background: #0d0d0d;
+    border: 1px solid #8c6b20;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item h3 {
+    color: #d4af37;
+    font-size: 18px;
+    padding: 16px 10px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .gallery {
+        padding: 50px 5%;
+    }
+
+    .gallery h2 {
+        font-size: 30px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 240px;
+    }
 }
