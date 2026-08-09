@@ -297,3 +297,49 @@ footer span {
     margin-top: 15px;
     text-align: center;
 }
+/* PREMIUM HERO */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.hero .small-title {
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 90px);
+    margin: 10px 0 20px;
+    line-height: 1;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.hero .button {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.hero .button:hover {
+    transform: translateY(-4px);
+}
