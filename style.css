@@ -1,0 +1,313 @@
+/* =========================================================
+   TiVON STUDIO — PREMIUM CLASSIC HERO
+   Black + Gold + Red + Blue
+   ========================================================= */
+
+.hero {
+    min-height: 88vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    /* Main animal/brand image */
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.96) 0%,
+            rgba(0, 0, 0, 0.86) 38%,
+            rgba(0, 0, 0, 0.48) 65%,
+            rgba(0, 0, 0, 0.78) 100%
+        ),
+        url("images/tivon-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #ffffff;
+
+    border-bottom: 3px solid var(--gold);
+}
+
+
+/* Premium blue/red atmosphere */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 85% 40%,
+            rgba(13, 71, 161, 0.30),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(183, 28, 28, 0.22),
+            transparent 30%
+        );
+
+    pointer-events: none;
+}
+
+
+/* Gold luxury frame */
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+
+    border: 1px solid rgba(201, 162, 39, 0.45);
+
+    pointer-events: none;
+}
+
+
+/* Hero content */
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+
+    width: min(92%, 1200px);
+    margin: 0 auto;
+
+    padding: 100px 0;
+
+    max-width: 780px;
+}
+
+
+/* Small luxury label */
+
+.hero-content::before {
+    content: "TI VON STUDIO • CREATIVE • CLASSIC • IMPACTFUL";
+
+    display: inline-block;
+
+    color: var(--gold-light);
+
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: bold;
+
+    margin-bottom: 22px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid var(--gold);
+}
+
+
+/* Main heading */
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 0.98;
+
+    letter-spacing: 2px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.8);
+
+    margin-bottom: 25px;
+}
+
+
+/* Gold brand word */
+
+.hero h1 span {
+    color: var(--gold-light);
+
+    text-shadow:
+        0 0 15px rgba(201, 162, 39, 0.25);
+}
+
+
+/* Hero paragraph */
+
+.hero p {
+    max-width: 650px;
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+
+    color: #eeeeee;
+
+    margin-bottom: 35px;
+}
+
+
+/* Hero buttons */
+
+.hero .btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Gold luxury line */
+
+.hero-content .gold-line {
+    width: 120px;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        var(--red),
+        var(--gold),
+        var(--blue)
+    );
+
+    margin: 20px 0 25px;
+}
+
+
+/* =========================================================
+   PREMIUM HERO BADGES
+   ========================================================= */
+
+.hero-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+.hero-service {
+    padding: 10px 16px;
+
+    border: 1px solid rgba(201, 162, 39, 0.55);
+
+    background: rgba(0, 0, 0, 0.55);
+
+    color: #ffffff;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.hero-service:hover {
+    background: var(--gold);
+    color: var(--black);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   CLASSIC DECORATION
+   ========================================================= */
+
+.classic-ornament {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 20px 0;
+}
+
+.classic-ornament::before,
+.classic-ornament::after {
+    content: "";
+
+    height: 1px;
+    width: 70px;
+
+    background: var(--gold);
+}
+
+.classic-ornament span {
+    color: var(--gold);
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   MOBILE HERO
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 90vh;
+
+        background-position:
+            68% center;
+    }
+
+    .hero::after {
+        top: 12px;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .hero-content {
+        padding: 80px 0;
+    }
+
+    .hero-content::before {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-services {
+        gap: 8px;
+    }
+
+    .hero-service {
+        font-size: 11px;
+        padding: 8px 11px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero {
+        background-position: 70% center;
+    }
+
+    .hero-content {
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.45rem;
+    }
+
+    .hero .btn {
+        width: 100%;
+        margin-right: 0;
+    }
+}
